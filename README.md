@@ -24,19 +24,28 @@
 
 ## Installation
 
-- Clone repository
+- Clone repository:
 ```bash
-$ git clone 
+$ git clone https://github.com/edertxodw/sfNamaste
 ```
-- Build
+- Configure sfdocker:
+```bash
+$ ./sfdocker config
+```
+> **Default configuration:**
+
+> Container: php-fpm
+
+> User: www-data
+- Build:
 ```bash
 $ ./sfdocker build
 ```
-- Install dependencies
+- Install dependencies:
 ```bash
 $ ./sfdocker yarn install
 ```
-- Create database tables
+- Create database tables:
 ```bash
 $ ./sfdocker console doctrine:schema:update --force
 ```
