@@ -1,0 +1,49 @@
+.navbar-default {
+  background-color: inherit;
+  transition: background-color 0.5s ease;
+  border: 0;
+  .navbar-brand {
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  .navbar-nav {
+    li {
+      a {
+        color: $secondary-font-color;
+        font-weight: normal;
+        transition: color 0.5s ease;
+      }
+    }
+    .active {
+      a {
+        background-color: $secondary-font-color;
+        color: $primary-font-color;
+        &:hover, &:active, &:focus {
+          background-color: $secondary-font-color;
+        }
+      }
+    }
+  }
+}
+
+.scrolled {
+  background-color: $secondary-font-color;
+  .navbar-nav {
+    li {
+      a {
+        color: $primary-font-color;
+      }
+    }
+    .active {
+      a {
+        background-color: $primary-font-color;
+        color: $content-background-color;
+        &:hover, &:active, &:focus {
+          background-color: $primary-font-color;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.tweet {
+  background-color: $content-background-color;
+  border: 1px solid $content-border-color;
+  padding: 20px;
+  margin-bottom: 15px;
+  &:last-child {
+    margin-bottom: 50px;
+  }
+}
+
+#new-tweet-form {
+  padding: 20px;
+}
+
+#btn-new-tweet {
+  border-radius: 50%;
+  position: fixed;
+  bottom: 20px;
+  background-color: $secondary-font-color;
+  border-color: $background-color;
+}

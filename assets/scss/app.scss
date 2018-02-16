@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster|Roboto+Condensed');
+@import "vars.scss";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+@import "navbar";
+@import "mobile";
+@import "index";
+
+body {
+  background-color: $background-color;
+  color: $primary-font-color;
+  padding-top: 70px;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: $font-size-large;
+}
+
+a {
+  color: $link-color;
+  font-weight: bold;
+}
+
+textarea {
+  resize: none;
+}
+
+.btn-default {
+  background-color: $secondary-font-color;
+  &:hover, &:active, &:focus {
+    background-color: $secondary-font-color;
+  }
+}
+
+.form-control {
+  background-color: inherit;
+  border: 1px solid $primary-font-color;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  &:focus, &:active {
+    color: $primary-font-color;
+    border: 2px solid $primary-font-color;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+}

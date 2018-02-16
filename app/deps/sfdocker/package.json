@@ -1,0 +1,6 @@
+{
+  "name": "sfdocker",
+  "version": "1.0.3",
+  "description": "Bash wrapper for managing docker-compose based symfony projects",
+  "scripts": [ "sfdocker.bash", "README.md", "package.json" ]
+}

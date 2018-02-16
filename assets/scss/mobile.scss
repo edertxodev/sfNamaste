@@ -1,0 +1,18 @@
+@media screen and (max-width: $screen-sm) {
+  .navbar-default {
+    .navbar-toggle {
+      border: 0;
+      color: $primary-font-color;
+      &:hover, &:active, &:focus {
+        background-color: inherit;
+      }
+    }
+    .navbar-collapse {
+      background: $content-background-color;
+    }
+  }
+
+  #new-tweet-form {
+    position: relative;
+  }
+}

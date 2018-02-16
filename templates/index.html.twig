@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+{% trans_default_domain 'index' %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-sm-12">
+            <button id="btn-new-tweet" type="button" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#new-tweet-modal" title="{{ 'new_tweet'|trans }}">
+                <span class="glyphicon glyphicon-pencil"></span>
+            </button>
+            <h1 class="text-center">{{ 'title'|trans }}</h1>
+            {% for tweet in tweets %}
+                <div class="tweet">
+                    <p>{{ tweet.content }}</p>
+                    <small>{{ tweet.createdAt|date('Y-m-d H:i')}}</small>
+                </div>
+            {% endfor %}
+        </div>
+        <div id="new-tweet-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">{{ 'new_tweet'|trans }}</h4>
+                    </div>
+                    {{ form_start(form, {'attr': {'id': 'new-tweet-form'}}) }}
+                    <div class="form-group col-sm-12 {% if not form.content.vars.valid %}input-error{% endif %}">
+                        {{ form_label(form.content) }}
+                        {{ form_widget(form.content, {'attr': {'class': 'form-control'}}) }}
+                    </div>
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
