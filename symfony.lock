@@ -89,6 +89,18 @@
     "ocramius/proxy-manager": {
         "version": "2.2.0"
     },
+    "overblog/graphql-bundle": {
+        "version": "0.9",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "0.9",
+            "ref": "31775bd62133c1ed66fac537694909c25fbfb879"
+        }
+    },
+    "overblog/graphql-php-generator": {
+        "version": "v0.6.0"
+    },
     "phpdocumentor/reflection-common": {
         "version": "1.0.1"
     },

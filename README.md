@@ -49,3 +49,13 @@ $ ./sfdocker yarn install
 ```bash
 $ ./sfdocker console doctrine:schema:update --force
 ```
+
+## Tweets
+
+**sfNamaste** comes with a CRUD example entity. You can write
+yor own __tweets__ from the example page at `http://localhost:3000/tweets`
+
+## GraphQL
+
+Integrates [overblog/GraphQLBundle(v 0.10)](https://github.com/overblog/GraphQLBundle/tree/0.10)
+so you can create a **GraphQL** based query API.

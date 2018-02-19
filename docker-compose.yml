@@ -20,7 +20,7 @@ services:
         - POSTGRES_DB=sfnamaste
 
     webserver:
-      image: nginx:alpine
+      image: nginx:latest
       container_name: sfnamaste-webserver
       working_dir: /application
       volumes:

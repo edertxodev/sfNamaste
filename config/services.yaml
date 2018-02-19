@@ -38,3 +38,14 @@ services:
             - { name: doctrine.event_subscriber, connection: default }
         calls:
             - [ setAnnotationReader, [ '@annotation_reader' ] ]
+
+    # GraphQL Resolvers
+    App\GraphQL\Resolver\TweetResolver:
+        tags:
+            - { name: overblog_graphql.resolver, method: 'resolveAll', alias: 'allTweets' }
+            - { name: overblog_graphql.resolver, method: 'resolveById', alias: 'tweetById' }
+
+    # GraphQL Mutations
+    App\GraphQL\Mutation\TweetMutation:
+        tags:
+            - { name: overblog_graphql.mutation, method: 'create', alias: 'createTweet' }
