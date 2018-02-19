@@ -1,0 +1,10 @@
+Mutation:
+    type: object
+    config:
+        fields:
+            createTweet:
+                type: CreateTweetPayload!
+                resolve: "@=mutation('createTweet', [args['input']['content']])"
+                args:
+                    input:
+                        type: CreateTweetInput!

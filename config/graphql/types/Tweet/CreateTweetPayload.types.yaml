@@ -1,0 +1,6 @@
+CreateTweetPayload:
+    type: object
+    config:
+        fields:
+            tweet:
+                type: "Tweet"
