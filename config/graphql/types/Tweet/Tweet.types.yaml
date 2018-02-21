@@ -1,0 +1,17 @@
+Tweet:
+    type: object
+    config:
+        description: "A tweet"
+        fields:
+            id:
+                description: "Unique ID of the tweet"
+                type: "Int!"
+            content:
+                description: "Content of the tweet"
+                type: "String"
+            created_at:
+                description: "Created date"
+                type: "DateTime"
+            updated_at:
+                description: "Updated date"
+                type: "DateTime"

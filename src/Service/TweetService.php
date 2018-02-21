@@ -29,7 +29,17 @@ class TweetService extends CRUDAbstractService
      */
     public function getAllDesc(): array
     {
-        return $this->tweetRepository->findAllDesc();
+        return $this->tweetRepository->findBy([], ['id' => 'desc']);
+    }
+
+    /**
+     * @param int $id
+     *
+     * @return Tweet|null
+     */
+    public function getOneById(int $id): ?Tweet
+    {
+        return $this->tweetRepository->find($id);
     }
 
     /**

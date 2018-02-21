@@ -10,16 +10,16 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class IndexController extends Controller
+class TweetController extends Controller
 {
     /**
      * @param Request      $request
      * @param TweetService $tweetService
-     * @Route("/", name="index")
+     * @Route("/tweets", name="tweets")
      *
      * @return Response
      */
-    public function indexAction(Request $request, TweetService $tweetService): Response
+    public function listAction(Request $request, TweetService $tweetService): Response
     {
         $tweet = new Tweet();
         $form = $this->createForm(TweetType::class, $tweet);

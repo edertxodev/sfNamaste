@@ -1,0 +1,14 @@
+Query:
+    type: object
+    config:
+        fields:
+            tweets:
+                type: "[Tweet]"
+                resolve: "@=resolver('allTweets')"
+            tweet:
+                type: "Tweet"
+                args:
+                    id:
+                        description: "Resolves using the tweet id."
+                        type: "Int!"
+                resolve: "@=resolver('tweetById', [args['id']])"
